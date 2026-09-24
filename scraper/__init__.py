@@ -1,0 +1,1 @@
+"""Scrapy project for the INGALITO product source."""

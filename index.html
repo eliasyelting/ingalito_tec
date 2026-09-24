@@ -1,0 +1,1301 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Catálogo online de tecnología INGALITO. Consultá productos, precios y disponibilidad por WhatsApp."
+    />
+    <meta name="theme-color" content="#0b1318" />
+    <title>INGALITO | Catálogo de tecnología</title>
+    <style>
+      :root {
+        --ink: #eff8f3;
+        --ink-soft: #a9bbb6;
+        --paper: #0b1318;
+        --surface: #132128;
+        --line: #2a3b40;
+        --mint: #143f32;
+        --mint-strong: #3ea878;
+        --green: #5bdaa0;
+        --green-dark: #8ee8bd;
+        --sun: #f4c95d;
+        --sun-soft: #4c3d18;
+        --rose: #482522;
+        --ink-deep: #101a22;
+        --muted-code: #80938e;
+        --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+        --radius-lg: 28px;
+        --radius-md: 18px;
+      }
+
+      html[data-theme="light"] {
+        --ink: #101a22;
+        --ink-soft: #52616b;
+        --paper: #f6f8f7;
+        --surface: #ffffff;
+        --line: #dfe7e3;
+        --mint: #dff6e9;
+        --mint-strong: #b8eccf;
+        --green: #137a4b;
+        --green-dark: #0d5c39;
+        --sun-soft: #fff1c7;
+        --rose: #fbe5df;
+        --ink-deep: #101a22;
+        --muted-code: #84929a;
+        --shadow: 0 18px 50px rgba(16, 26, 34, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 88% 0%, rgba(27, 91, 64, 0.34), transparent 28rem),
+          radial-gradient(circle at 0% 10%, rgba(133, 101, 22, 0.16), transparent 24rem),
+          var(--paper);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        line-height: 1.5;
+        transition:
+          color 180ms ease,
+          background-color 180ms ease;
+      }
+
+      html[data-theme="light"] body {
+        background:
+          radial-gradient(circle at 88% 0%, rgba(223, 246, 233, 0.92), transparent 28rem),
+          radial-gradient(circle at 0% 10%, rgba(255, 241, 199, 0.72), transparent 24rem),
+          var(--paper);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      button,
+      input,
+      select {
+        font: inherit;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 26px 0;
+      }
+
+      .topbar-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .theme-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        min-height: 40px;
+        padding: 0 13px;
+        color: var(--ink);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 850;
+        transition:
+          border-color 160ms ease,
+          background-color 160ms ease;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--mint-strong);
+        background: var(--mint);
+      }
+
+      .theme-icon {
+        display: grid;
+        width: 22px;
+        height: 22px;
+        place-items: center;
+        color: var(--ink-deep);
+        background: var(--sun);
+        border-radius: 50%;
+        font-size: 13px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        color: var(--ink);
+        background: var(--sun);
+        border-radius: 14px 14px 14px 4px;
+        font-size: 18px;
+        font-weight: 900;
+        letter-spacing: -0.08em;
+      }
+
+      .brand-name {
+        font-size: 20px;
+        font-weight: 900;
+        letter-spacing: -0.06em;
+      }
+
+      .brand-caption {
+        display: block;
+        margin-top: -3px;
+        color: var(--ink-soft);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .topbar-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--green-dark);
+        font-size: 14px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .topbar-link::after {
+        content: "↗";
+        display: grid;
+        width: 26px;
+        height: 26px;
+        place-items: center;
+        color: var(--ink);
+        background: var(--sun);
+        border-radius: 50%;
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+        gap: 34px;
+        align-items: end;
+        min-height: 390px;
+        padding: clamp(34px, 6vw, 74px);
+        color: #f8fcfa;
+        background:
+          linear-gradient(125deg, rgba(16, 26, 34, 0.98), rgba(20, 55, 48, 0.95)),
+          var(--ink);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow);
+      }
+
+      .hero::before,
+      .hero::after {
+        position: absolute;
+        content: "";
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .hero::before {
+        width: 480px;
+        height: 480px;
+        right: -100px;
+        top: -240px;
+      }
+
+      .hero::after {
+        width: 330px;
+        height: 330px;
+        right: 22px;
+        bottom: -210px;
+      }
+
+      .hero-content,
+      .hero-stats {
+        position: relative;
+        z-index: 1;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 18px;
+        color: var(--mint-strong);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 28px;
+        height: 3px;
+        content: "";
+        background: var(--sun);
+        border-radius: 99px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 720px;
+        margin-bottom: 20px;
+        font-size: clamp(44px, 7vw, 82px);
+        font-weight: 900;
+        letter-spacing: -0.085em;
+        line-height: 0.94;
+      }
+
+      .hero-copy {
+        max-width: 570px;
+        margin-bottom: 25px;
+        color: rgba(248, 252, 250, 0.72);
+        font-size: clamp(16px, 2vw, 19px);
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        max-width: 640px;
+      }
+
+      .benefit {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 13px 14px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 13px;
+      }
+
+      .benefit strong {
+        color: var(--sun);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.045em;
+        line-height: 1.2;
+      }
+
+      .benefit span {
+        color: rgba(248, 252, 250, 0.68);
+        font-size: 11px;
+        line-height: 1.25;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .hero-stat {
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.13);
+        border-radius: 18px;
+        backdrop-filter: blur(8px);
+      }
+
+      .hero-stat strong {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--sun);
+        font-size: 28px;
+        font-weight: 900;
+        letter-spacing: -0.06em;
+      }
+
+      .hero-stat span {
+        color: rgba(248, 252, 250, 0.72);
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .catalogue {
+        padding: 68px 0 44px;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 22px;
+      }
+
+      .section-heading h2 {
+        margin-bottom: 7px;
+        font-size: clamp(28px, 4vw, 42px);
+        letter-spacing: -0.07em;
+        line-height: 1;
+      }
+
+      .section-heading p {
+        max-width: 520px;
+        margin-bottom: 0;
+        color: var(--ink-soft);
+      }
+
+      .result-count {
+        flex: 0 0 auto;
+        color: var(--green-dark);
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: minmax(210px, 1.5fr) minmax(180px, 0.8fr) auto;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 22px;
+        padding: 12px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(16, 26, 34, 0.04);
+      }
+
+      .search-wrap {
+        position: relative;
+      }
+
+      .search-wrap::before {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        content: "⌕";
+        color: var(--ink-soft);
+        font-size: 24px;
+        line-height: 1;
+        transform: translateY(-54%);
+      }
+
+      .search,
+      .category-select {
+        width: 100%;
+        height: 48px;
+        padding: 0 16px;
+        color: var(--ink);
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        outline: none;
+      }
+
+      .search {
+        padding-left: 46px;
+      }
+
+      .search:focus,
+      .category-select:focus {
+        border-color: var(--green);
+        box-shadow: 0 0 0 4px rgba(19, 122, 75, 0.12);
+      }
+
+      .status-tabs {
+        display: inline-flex;
+        justify-content: end;
+        gap: 5px;
+      }
+
+      .tab {
+        min-height: 42px;
+        padding: 0 13px;
+        color: var(--ink-soft);
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 11px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .tab:hover {
+        color: var(--ink);
+        background: var(--paper);
+      }
+
+      .tab.active {
+        color: var(--green-dark);
+        background: var(--mint);
+        border-color: var(--mint-strong);
+      }
+
+      .category-strip {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        margin-bottom: 34px;
+        padding-bottom: 4px;
+        scrollbar-width: thin;
+      }
+
+      .category-chip {
+        flex: 0 0 auto;
+        padding: 9px 13px;
+        color: var(--green-dark);
+        background: var(--mint);
+        border: 1px solid transparent;
+        border-radius: 99px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 850;
+        transition: 160ms ease;
+      }
+
+      .category-chip:hover,
+      .category-chip.active {
+        color: var(--ink);
+        background: var(--sun-soft);
+        border-color: var(--sun);
+      }
+
+      .category-chip span {
+        margin-left: 5px;
+        color: var(--ink-soft);
+        font-size: 11px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .product-card {
+        position: relative;
+        display: flex;
+        min-height: 262px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 22px;
+        overflow: hidden;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .product-card::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        content: "";
+        background: var(--mint-strong);
+      }
+
+      .product-card:hover {
+        border-color: var(--mint-strong);
+        box-shadow: 0 18px 38px rgba(16, 26, 34, 0.1);
+        transform: translateY(-4px);
+      }
+
+      .card-top {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .category-label {
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .state-label {
+        padding: 5px 8px;
+        color: var(--green-dark);
+        background: var(--mint);
+        border-radius: 99px;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .state-label.consultar {
+        color: #8a5512;
+        background: var(--sun-soft);
+      }
+
+      .product-name {
+        min-height: 62px;
+        margin: 22px 0 14px;
+        font-size: 21px;
+        font-weight: 850;
+        letter-spacing: -0.055em;
+        line-height: 1.08;
+      }
+
+      .product-code {
+        overflow: hidden;
+        margin-bottom: 18px;
+        color: var(--muted-code);
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 10px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .price-label {
+        margin-bottom: 5px;
+        color: var(--ink-soft);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .price {
+        margin-bottom: 17px;
+        font-size: 27px;
+        font-weight: 950;
+        letter-spacing: -0.07em;
+        line-height: 1;
+      }
+
+      .price.consultar {
+        color: #a56b17;
+        font-size: 22px;
+        letter-spacing: -0.045em;
+      }
+
+      .whatsapp-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 45px;
+        padding: 0 14px 0 16px;
+        color: #f8fcfa;
+        background: var(--green);
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+        transition: background 160ms ease;
+      }
+
+      .whatsapp-button:hover {
+        background: var(--green-dark);
+      }
+
+      .whatsapp-button::after {
+        content: "→";
+        display: grid;
+        width: 25px;
+        height: 25px;
+        place-items: center;
+        color: var(--ink);
+        background: var(--sun);
+        border-radius: 50%;
+        font-size: 17px;
+      }
+
+      .empty-state,
+      .loading-state,
+      .error-state {
+        grid-column: 1 / -1;
+        padding: 56px 24px;
+        color: var(--ink-soft);
+        background: var(--surface);
+        border: 1px dashed var(--line);
+        border-radius: var(--radius-md);
+        text-align: center;
+      }
+
+      .error-state {
+        color: #8f3e2f;
+        background: var(--rose);
+        border-color: #edb8ab;
+      }
+
+      .info-band {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+        margin: 22px 0 68px;
+      }
+
+      .info-card {
+        padding: 28px;
+        border-radius: var(--radius-md);
+      }
+
+      /* Modificación aplicada para mejorar el contraste y legibilidad */
+      .info-card:first-child {
+        color: var(--ink);
+        background: var(--surface);
+        border: 1px solid var(--line);
+      }
+
+      .info-card:last-child {
+        color: #eaf8f0;
+        background: var(--ink-deep);
+      }
+
+      .info-card h2 {
+        margin-bottom: 8px;
+        font-size: 26px;
+        letter-spacing: -0.065em;
+      }
+
+      .info-card p {
+        max-width: 520px;
+        margin-bottom: 0;
+        font-size: 14px;
+      }
+
+      .info-card:first-child p {
+        color: var(--ink-soft);
+      }
+
+      .info-card:last-child p {
+        color: rgba(234, 248, 240, 0.72);
+      }
+
+      footer {
+        padding: 28px 0 42px;
+        border-top: 1px solid var(--line);
+      }
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: var(--ink-soft);
+        font-size: 12px;
+      }
+
+      .footer-brand {
+        color: var(--ink);
+        font-weight: 900;
+        letter-spacing: -0.04em;
+      }
+
+      .footer-number {
+        color: var(--green-dark);
+        font-weight: 850;
+      }
+
+      .floating-whatsapp {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        z-index: 20;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 54px;
+        padding: 0 18px 0 12px;
+        color: #f8fcfa;
+        background: #18a866;
+        border: 3px solid var(--paper);
+        border-radius: 99px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+        font-size: 13px;
+        font-weight: 900;
+        text-decoration: none;
+        transition:
+          background 160ms ease,
+          transform 160ms ease;
+      }
+
+      .floating-whatsapp:hover {
+        background: #0f884f;
+        transform: translateY(-3px);
+      }
+
+      .floating-whatsapp-icon {
+        display: grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        color: #18a866;
+        background: #f8fcfa;
+        border-radius: 50%;
+        font-size: 16px;
+        font-weight: 950;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .reveal {
+        animation: reveal 500ms both;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+
+        .hero-stats {
+          max-width: 460px;
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 680px) {
+        .shell {
+          width: min(100% - 28px, 540px);
+        }
+
+        .topbar {
+          padding: 18px 0;
+        }
+
+        .topbar-actions {
+          gap: 8px;
+        }
+
+        .theme-toggle {
+          padding: 0 9px;
+        }
+
+        .theme-label {
+          display: none;
+        }
+
+        .topbar-link {
+          font-size: 0;
+        }
+
+        .topbar-link::after {
+          font-size: 16px;
+        }
+
+        .hero {
+          gap: 28px;
+          padding: 34px 24px;
+          border-radius: 22px;
+        }
+
+        h1 {
+          font-size: clamp(42px, 14vw, 64px);
+        }
+
+        .hero-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .catalogue {
+          padding-top: 48px;
+        }
+
+        .section-heading,
+        .footer-inner {
+          align-items: start;
+          flex-direction: column;
+        }
+
+        .controls {
+          grid-template-columns: 1fr;
+        }
+
+        .status-tabs {
+          justify-content: stretch;
+        }
+
+        .tab {
+          flex: 1;
+        }
+
+        .product-grid,
+        .info-band {
+          grid-template-columns: 1fr;
+        }
+
+        .product-card {
+          min-height: 240px;
+        }
+
+        .floating-whatsapp {
+          right: 14px;
+          bottom: 14px;
+          min-height: 50px;
+          padding-right: 14px;
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shell topbar">
+      <a class="brand" href="#" aria-label="INGALITO inicio">
+        <span class="brand-mark">IN</span>
+        <span>
+          <span class="brand-name">INGALITO</span>
+          <span class="brand-caption">Tecnología que conecta</span>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Cambiar a tema claro"
+          aria-pressed="false"
+        >
+          <span id="theme-icon" class="theme-icon" aria-hidden="true">☀</span>
+          <span id="theme-label" class="theme-label">Tema claro</span>
+        </button>
+        <a class="topbar-link" href="#catalogo">Ver catálogo</a>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Catálogo online</p>
+          <h1 id="hero-title">Elegí tecnología para tu próximo paso.</h1>
+          <p class="hero-copy">
+            Productos seleccionados, precios claros y atención directa. Encontrá tu próximo equipo
+            y consultá disponibilidad con INGALITO.
+          </p>
+          <div class="benefits-grid" aria-label="Beneficios de INGALITO">
+            <div class="benefit">
+              <strong>CONTAMOS CON GARANTÍA</strong>
+              <span>Garantía en todos los productos</span>
+            </div>
+            <div class="benefit">
+              <strong>ENVÍOS A TODO EL PAÍS</strong>
+              <span>Hacemos llegar tu paquete a cualquier parte del país</span>
+            </div>
+            <div class="benefit">
+              <strong>MÚLTIPLES MEDIOS DE PAGO</strong>
+              <span>Efectivo, transferencia o criptomonedas</span>
+            </div>
+            <div class="benefit">
+              <strong>ACEPTAMOS TU CELULAR</strong>
+              <span>¡Cotización inmediata por WhatsApp!</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-stats" aria-label="Resumen del catálogo">
+          <div class="hero-stat">
+            <strong id="product-total">—</strong>
+            <span>productos publicados</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="category-total">—</strong>
+            <span>categorías activas</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="priced-total">—</strong>
+            <span>con precio visible</span>
+          </div>
+          <div class="hero-stat">
+            <strong id="consult-total">—</strong>
+            <span>para consultar</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalogo" class="catalogue" aria-labelledby="catalog-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explorá la colección</p>
+            <h2 id="catalog-title">Todo lo que estás buscando.</h2>
+            <p>Filtrá por categoría, buscá por nombre o escribinos directamente por WhatsApp.</p>
+          </div>
+          <div id="result-count" class="result-count" aria-live="polite">Cargando</div>
+        </div>
+
+        <div class="controls" aria-label="Filtros del catálogo">
+          <label class="search-wrap">
+            <span class="sr-only">Buscar productos</span>
+            <input id="search" class="search" type="search" placeholder="Buscar producto..." />
+          </label>
+          <label>
+            <span class="sr-only">Filtrar por categoría</span>
+            <select id="category-select" class="category-select">
+              <option value="all">Todas las categorías</option>
+            </select>
+          </label>
+          <div class="status-tabs" role="group" aria-label="Filtrar por disponibilidad">
+            <button class="tab active" type="button" data-status="all">Todos</button>
+            <button class="tab" type="button" data-status="disponible">Con precio</button>
+            <button class="tab" type="button" data-status="consultar">Consultar</button>
+          </div>
+        </div>
+
+        <div id="category-strip" class="category-strip" aria-label="Categorías"></div>
+        <div id="product-grid" class="product-grid" aria-live="polite">
+          <div class="loading-state">Cargando catálogo...</div>
+        </div>
+      </section>
+
+      <section class="info-band" aria-label="Información de INGALITO">
+        <article class="info-card">
+          <h2>¿No encontraste lo que buscabas?</h2>
+          <p>Escribinos y te ayudamos a encontrar la opción indicada para vos.</p>
+        </article>
+        <article class="info-card">
+          <h2>Atención directa</h2>
+          <p>Consultas y disponibilidad por WhatsApp. Respondemos con información actualizada.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell footer-inner">
+        <div>
+          <span class="footer-brand">INGALITO</span>
+          <span> · Catálogo online de tecnología</span>
+        </div>
+        <div>
+          WhatsApp:
+          <a class="footer-number" href="https://wa.me/5491124036673">5491124036673</a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20tengo%20una%20consulta%20que%20realizar..."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Abrir WhatsApp con una consulta para INGALITO"
+    >
+      <span class="floating-whatsapp-icon" aria-hidden="true">↗</span>
+      <span>¿Tenés una consulta?</span>
+    </a>
+
+    <script>
+      const root = document.documentElement;
+      const themeToggle = document.querySelector("#theme-toggle");
+      const themeIcon = document.querySelector("#theme-icon");
+      const themeLabel = document.querySelector("#theme-label");
+
+      const setTheme = (theme) => {
+        const isLight = theme === "light";
+        root.dataset.theme = isLight ? "light" : "dark";
+        themeIcon.textContent = isLight ? "☾" : "☀";
+        themeLabel.textContent = isLight ? "Tema oscuro" : "Tema claro";
+        themeToggle.setAttribute("aria-label", isLight ? "Cambiar a tema oscuro" : "Cambiar a tema claro");
+        themeToggle.setAttribute("aria-pressed", String(isLight));
+        localStorage.setItem("ingalito-theme", root.dataset.theme);
+      };
+
+      setTheme(localStorage.getItem("ingalito-theme") === "light" ? "light" : "dark");
+      themeToggle.addEventListener("click", () => {
+        setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+      });
+
+      const state = {
+        products: [],
+        category: "all",
+        status: "all",
+        query: "",
+      };
+
+      const elements = {
+        grid: document.querySelector("#product-grid"),
+        search: document.querySelector("#search"),
+        categorySelect: document.querySelector("#category-select"),
+        categoryStrip: document.querySelector("#category-strip"),
+        resultCount: document.querySelector("#result-count"),
+        productTotal: document.querySelector("#product-total"),
+        categoryTotal: document.querySelector("#category-total"),
+        pricedTotal: document.querySelector("#priced-total"),
+        consultTotal: document.querySelector("#consult-total"),
+      };
+
+      const escapeHTML = (value) =>
+        String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+
+      const formatARS = (value) =>
+        new Intl.NumberFormat("es-AR", {
+          style: "currency",
+          currency: "ARS",
+          maximumFractionDigits: 0,
+        }).format(value);
+
+      const categoryPriority = [
+        "IPHONE",
+        "IPHONE SEMINUEVOS",
+        "SAMSUNG",
+        "POCO",
+        "XIAOMI",
+        "MOTOROLA",
+        "APPLE",
+        "NOTEBOOKS",
+        "JBL",
+        "TABLET",
+        "CONSOLAS",
+        "CARGADORES",
+      ];
+      const featuredProductPriority = [
+        "iPhone 18 Pro Max 256GB",
+        "iPhone 18 Pro 256GB",
+      ];
+
+      const displayCategory = (category) => category;
+
+      const getCategories = () =>
+        [...new Set(state.products.map((product) => product.categoria))].sort((a, b) => {
+          const priorityA = categoryPriority.indexOf(a);
+          const priorityB = categoryPriority.indexOf(b);
+          if (priorityA !== -1 || priorityB !== -1) {
+            if (priorityA === -1) return 1;
+            if (priorityB === -1) return -1;
+            return priorityA - priorityB;
+          }
+          return a.localeCompare(b, "es");
+        });
+
+      const filteredProducts = () => {
+        const query = state.query.trim().toLocaleLowerCase("es");
+        const catalogOrder = new Map(
+          state.products.map((product, index) => [product.id, index]),
+        );
+        return state.products
+          .filter((product) => state.category === "all" || product.categoria === state.category)
+          .filter((product) => state.status === "all" || product.estado === state.status)
+          .filter(
+            (product) =>
+              !query ||
+              `${product.nombre} ${product.categoria} ${product.id}`
+                .toLocaleLowerCase("es")
+                .includes(query),
+          )
+          .sort((a, b) => {
+            const featuredA = featuredProductPriority.indexOf(a.nombre);
+            const featuredB = featuredProductPriority.indexOf(b.nombre);
+            if (featuredA !== -1 || featuredB !== -1) {
+              if (featuredA === -1) return 1;
+              if (featuredB === -1) return -1;
+              return featuredA - featuredB;
+            }
+
+            const categoryA = categoryPriority.indexOf(a.categoria);
+            const categoryB = categoryPriority.indexOf(b.categoria);
+            const categoryRankA = categoryA === -1 ? categoryPriority.length : categoryA;
+            const categoryRankB = categoryB === -1 ? categoryPriority.length : categoryB;
+            if (categoryRankA !== categoryRankB) return categoryRankA - categoryRankB;
+
+            return (catalogOrder.get(a.id) ?? 0) - (catalogOrder.get(b.id) ?? 0);
+          });
+      };
+
+      const renderStats = () => {
+        const categories = getCategories();
+        elements.productTotal.textContent = state.products.length;
+        elements.categoryTotal.textContent = categories.length;
+        elements.pricedTotal.textContent = state.products.filter(
+          (product) => product.estado === "disponible",
+        ).length;
+        elements.consultTotal.textContent = state.products.filter(
+          (product) => product.estado === "consultar",
+        ).length;
+      };
+
+      const renderCategoryControls = () => {
+        const categories = getCategories();
+        elements.categorySelect.innerHTML =
+          '<option value="all">Todas las categorías</option>' +
+          categories
+            .map(
+              (category) =>
+                `<option value="${escapeHTML(category)}">${escapeHTML(displayCategory(category))}</option>`,
+            )
+            .join("");
+        elements.categorySelect.value = state.category;
+
+        const categoryCounts = state.products.reduce((counts, product) => {
+          counts[product.categoria] = (counts[product.categoria] || 0) + 1;
+          return counts;
+        }, {});
+
+        elements.categoryStrip.innerHTML = [
+          ...categories.map(
+            (category) =>
+              `<button class="category-chip ${state.category === category ? "active" : ""}" type="button" data-category="${escapeHTML(category)}">${escapeHTML(displayCategory(category))} <span>${categoryCounts[category]}</span></button>`,
+          ),
+          `<button class="category-chip ${state.category === "all" ? "active" : ""}" type="button" data-category="all">Todas <span>${state.products.length}</span></button>`,
+        ].join("");
+
+        elements.categoryStrip.querySelectorAll("[data-category]").forEach((button) => {
+          button.addEventListener("click", () => {
+            state.category = button.dataset.category;
+            renderCategoryControls();
+            renderProducts();
+          });
+        });
+      };
+
+      const renderProduct = (product, index) => {
+        const isConsultar = product.estado === "consultar";
+        const price = isConsultar
+          ? "Consultar disponibilidad"
+          : formatARS(product.precio_venta);
+        const whatsappURL = /^https:\/\/wa\.me\/\d+\?text=/.test(product.whatsapp_url)
+          ? product.whatsapp_url
+          : `https://wa.me/${product.whatsapp}`;
+
+        return `
+          <article class="product-card reveal" style="animation-delay: ${Math.min(index * 18, 240)}ms">
+            <div>
+              <div class="card-top">
+                <span class="category-label">${escapeHTML(displayCategory(product.categoria))}</span>
+                <span class="state-label ${isConsultar ? "consultar" : ""}">
+                  ${isConsultar ? "Consultar" : "Disponible"}
+                </span>
+              </div>
+              <h3 class="product-name">${escapeHTML(product.nombre)}</h3>
+              <div class="price-label">${isConsultar ? "Estado" : "Precio INGALITO"}</div>
+              <div class="price ${isConsultar ? "consultar" : ""}">${escapeHTML(price)}</div>
+            </div>
+            <a class="whatsapp-button" href="${escapeHTML(whatsappURL)}" target="_blank" rel="noopener noreferrer">
+              ${isConsultar ? "Consultar por WhatsApp" : "Quiero este producto"}
+            </a>
+          </article>
+        `;
+      };
+
+      const renderProducts = () => {
+        const products = filteredProducts();
+        elements.resultCount.textContent = `${products.length} ${
+          products.length === 1 ? "resultado" : "resultados"
+        }`;
+        if (!products.length) {
+          elements.grid.innerHTML =
+            '<div class="empty-state"><strong>No encontramos productos.</strong><br />Probá con otra búsqueda o categoría.</div>';
+          return;
+        }
+        elements.grid.innerHTML = products.map(renderProduct).join("");
+      };
+
+      const render = () => {
+        renderStats();
+        renderCategoryControls();
+        renderProducts();
+      };
+
+      const loadCatalog = async () => {
+        try {
+          const response = await fetch("./data/catalogo.json", { cache: "no-store" });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const catalog = await response.json();
+          if (!Array.isArray(catalog.productos)) {
+            throw new Error("El catálogo no tiene el formato esperado.");
+          }
+          state.products = catalog.productos;
+          render();
+        } catch (error) {
+          console.error(error);
+          elements.resultCount.textContent = "Sin datos";
+          elements.grid.innerHTML =
+            '<div class="error-state"><strong>No pudimos cargar el catálogo.</strong><br />Verificá que <code>data/catalogo.json</code> esté publicado junto con este archivo.</div>';
+        }
+      };
+
+      elements.search.addEventListener("input", (event) => {
+        state.query = event.target.value;
+        renderProducts();
+      });
+
+      elements.categorySelect.addEventListener("change", (event) => {
+        state.category = event.target.value;
+        renderCategoryControls();
+        renderProducts();
+      });
+
+      document.querySelectorAll("[data-status]").forEach((button) => {
+        button.addEventListener("click", () => {
+          state.status = button.dataset.status;
+          document.querySelectorAll("[data-status]").forEach((item) => {
+            item.classList.toggle("active", item === button);
+          });
+          renderProducts();
+        });
+      });
+
+      loadCatalog();
+    </script>
+  </body>
+</html>

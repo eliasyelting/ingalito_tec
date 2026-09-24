@@ -1,0 +1,814 @@
+{
+  "productos": [
+    {
+      "id": "apple__airpods-4",
+      "categoria": "APPLE",
+      "nombre": "AirPods 4",
+      "precio_venta": 301000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20AirPods%204"
+    },
+    {
+      "id": "apple__airpods-4-noise-cancelling",
+      "categoria": "APPLE",
+      "nombre": "AirPods 4 Noise Cancelling",
+      "precio_venta": 357000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20AirPods%204%20Noise%20Cancelling"
+    },
+    {
+      "id": "apple__airpods-pro-3-usb-c",
+      "categoria": "APPLE",
+      "nombre": "AirPods Pro 3 USB-C",
+      "precio_venta": 545000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20AirPods%20Pro%203%20USB-C"
+    },
+    {
+      "id": "apple__macbook-air-m5-13-16-512gb",
+      "categoria": "APPLE",
+      "nombre": "MacBook Air M5 13\" 16/512GB",
+      "precio_venta": 2343000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20MacBook%20Air%20M5%2013%22%2016%2F512GB"
+    },
+    {
+      "id": "apple__macbook-neo-13-8-256gb",
+      "categoria": "APPLE",
+      "nombre": "MacBook Neo 13\" 8/256GB",
+      "precio_venta": 1522000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20MacBook%20Neo%2013%22%208%2F256GB"
+    },
+    {
+      "id": "apple__macbook-neo-13-8-512gb",
+      "categoria": "APPLE",
+      "nombre": "MacBook Neo 13\" 8/512GB",
+      "precio_venta": 1645000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20MacBook%20Neo%2013%22%208%2F512GB"
+    },
+    {
+      "id": "apple__ipad-a16-128gb",
+      "categoria": "APPLE",
+      "nombre": "iPad A16 128GB",
+      "precio_venta": 980000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPad%20A16%20128GB"
+    },
+    {
+      "id": "apple__ipad-a16-256gb",
+      "categoria": "APPLE",
+      "nombre": "iPad A16 256GB",
+      "precio_venta": 1155000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPad%20A16%20256GB"
+    },
+    {
+      "id": "cargadores__apple-original-20w",
+      "categoria": "CARGADORES",
+      "nombre": "Apple Original 20W",
+      "precio_venta": 60000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Apple%20Original%2020W"
+    },
+    {
+      "id": "cargadores__samsung-original-25w",
+      "categoria": "CARGADORES",
+      "nombre": "Samsung Original 25W",
+      "precio_venta": 60000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Samsung%20Original%2025W"
+    },
+    {
+      "id": "cargadores__samsung-original-45w-cable",
+      "categoria": "CARGADORES",
+      "nombre": "Samsung Original 45W + Cable",
+      "precio_venta": 100000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Samsung%20Original%2045W%20%2B%20Cable"
+    },
+    {
+      "id": "cargadores__xiaomi-original-20w",
+      "categoria": "CARGADORES",
+      "nombre": "Xiaomi Original 20W",
+      "precio_venta": 60000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xiaomi%20Original%2020W"
+    },
+    {
+      "id": "consolas__joystick-ps5-dualsense",
+      "categoria": "CONSOLAS",
+      "nombre": "Joystick PS5 DualSense",
+      "precio_venta": 194000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Joystick%20PS5%20DualSense"
+    },
+    {
+      "id": "consolas__nintendo-switch-2",
+      "categoria": "CONSOLAS",
+      "nombre": "Nintendo Switch 2",
+      "precio_venta": 1120000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Nintendo%20Switch%202"
+    },
+    {
+      "id": "consolas__nintendo-switch-2-con-mario-kart",
+      "categoria": "CONSOLAS",
+      "nombre": "Nintendo Switch 2 con Mario Kart",
+      "precio_venta": 1277000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Nintendo%20Switch%202%20con%20Mario%20Kart"
+    },
+    {
+      "id": "consolas__ps5-slim-1tb-digital",
+      "categoria": "CONSOLAS",
+      "nombre": "PS5 Slim 1TB Digital",
+      "precio_venta": 1347000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20PS5%20Slim%201TB%20Digital"
+    },
+    {
+      "id": "consolas__ps5-slim-1tb-fisica",
+      "categoria": "CONSOLAS",
+      "nombre": "PS5 Slim 1TB Fisica",
+      "precio_venta": 1557000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20PS5%20Slim%201TB%20Fisica"
+    },
+    {
+      "id": "consolas__xbox-series-s-512gb",
+      "categoria": "CONSOLAS",
+      "nombre": "Xbox Series S 512GB",
+      "precio_venta": 1051000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xbox%20Series%20S%20512GB"
+    },
+    {
+      "id": "consolas__xbox-series-x-1tb",
+      "categoria": "CONSOLAS",
+      "nombre": "Xbox Series X 1TB",
+      "precio_venta": 1683000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xbox%20Series%20X%201TB"
+    },
+    {
+      "id": "iphone__iphone-16-128gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 16 128GB",
+      "precio_venta": 1592000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2016%20128GB"
+    },
+    {
+      "id": "iphone__iphone-17-256gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 17 256GB",
+      "precio_venta": 1735000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2017%20256GB"
+    },
+    {
+      "id": "iphone__iphone-17-pro-256gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 17 Pro 256GB",
+      "precio_venta": 2175000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2017%20Pro%20256GB"
+    },
+    {
+      "id": "iphone__iphone-17-pro-max-256gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 17 Pro Max 256GB",
+      "precio_venta": 2343000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2017%20Pro%20Max%20256GB"
+    },
+    {
+      "id": "iphone__iphone-18-pro-256gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 18 Pro 256GB",
+      "precio_venta": null,
+      "estado": "consultar",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2018%20Pro%20256GB"
+    },
+    {
+      "id": "iphone__iphone-18-pro-max-256gb",
+      "categoria": "IPHONE",
+      "nombre": "iPhone 18 Pro Max 256GB",
+      "precio_venta": null,
+      "estado": "consultar",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2018%20Pro%20Max%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-13-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 13 128GB",
+      "precio_venta": 677000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2013%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-13-pro-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 13 Pro 128GB",
+      "precio_venta": 805000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2013%20Pro%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-13-pro-max-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 13 Pro Max 128GB",
+      "precio_venta": 980000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2013%20Pro%20Max%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-14-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 14 128GB",
+      "precio_venta": 732000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2014%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-14-pro-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 14 Pro 128GB",
+      "precio_venta": 980000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2014%20Pro%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-14-pro-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 14 Pro 256GB",
+      "precio_venta": 1051000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2014%20Pro%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-14-pro-max-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 14 Pro Max 128GB",
+      "precio_venta": 1069000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2014%20Pro%20Max%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-15-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 15 128GB",
+      "precio_venta": 980000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2015%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-15-pro-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 15 Pro 128GB",
+      "precio_venta": 1137000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2015%20Pro%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-15-pro-max-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 15 Pro Max 256GB",
+      "precio_venta": 1312000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2015%20Pro%20Max%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-16-pro-128gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 16 Pro 128GB",
+      "precio_venta": 1347000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2016%20Pro%20128GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-16-pro-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 16 Pro 256GB",
+      "precio_venta": 1435000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2016%20Pro%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-16-pro-max-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 16 Pro Max 256GB",
+      "precio_venta": 1610000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2016%20Pro%20Max%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-17-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 17 256GB",
+      "precio_venta": 1505000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2017%20256GB"
+    },
+    {
+      "id": "iphone-seminuevos__iphone-17-pro-256gb",
+      "categoria": "IPHONE SEMINUEVOS",
+      "nombre": "iPhone 17 Pro 256GB",
+      "precio_venta": 1941000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20iPhone%2017%20Pro%20256GB"
+    },
+    {
+      "id": "jbl__jbl-boombox-3",
+      "categoria": "JBL",
+      "nombre": "JBL BOOMBOX 3",
+      "precio_venta": 677000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20JBL%20BOOMBOX%203"
+    },
+    {
+      "id": "jbl__jbl-boombox-party-box-520",
+      "categoria": "JBL",
+      "nombre": "JBL BOOMBOX PARTY BOX 520",
+      "precio_venta": 1251000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20JBL%20BOOMBOX%20PARTY%20BOX%20520"
+    },
+    {
+      "id": "jbl__jbl-charge-6",
+      "categoria": "JBL",
+      "nombre": "JBL CHARGE 6",
+      "precio_venta": 329000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20JBL%20CHARGE%206"
+    },
+    {
+      "id": "jbl__jbl-flip-7",
+      "categoria": "JBL",
+      "nombre": "JBL FLIP 7",
+      "precio_venta": 253000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20JBL%20FLIP%207"
+    },
+    {
+      "id": "jbl__jbl-speaker-portatil-go-4",
+      "categoria": "JBL",
+      "nombre": "JBL SPEAKER PORTATIL GO 4",
+      "precio_venta": 120000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20JBL%20SPEAKER%20PORTATIL%20GO%204"
+    },
+    {
+      "id": "motorola__edge-50-pro-5g-512-12gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Edge 50 Pro 5G 512/12GB",
+      "precio_venta": 805000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Edge%2050%20Pro%205G%20512%2F12GB"
+    },
+    {
+      "id": "motorola__edge-50-ultra-5g-512-12gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Edge 50 Ultra 5G 512/12GB",
+      "precio_venta": 1172000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Edge%2050%20Ultra%205G%20512%2F12GB"
+    },
+    {
+      "id": "motorola__edge-60-fusion-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Edge 60 Fusion 5G 256/8GB",
+      "precio_venta": 622000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Edge%2060%20Fusion%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__edge-60-pro-5g-512-12gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Edge 60 Pro 5G 512/12GB",
+      "precio_venta": 962000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Edge%2060%20Pro%205G%20512%2F12GB"
+    },
+    {
+      "id": "motorola__edge-70-fusion-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Edge 70 Fusion 5G 256/8GB",
+      "precio_venta": 823000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Edge%2070%20Fusion%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__moto-g15-128-4gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G15 128/4GB",
+      "precio_venta": 357000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G15%20128%2F4GB"
+    },
+    {
+      "id": "motorola__moto-g35-5g-128-4gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G35 5G 128/4GB",
+      "precio_venta": 376000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G35%205G%20128%2F4GB"
+    },
+    {
+      "id": "motorola__moto-g56-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G56 5G 256/8GB",
+      "precio_venta": 526000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G56%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__moto-g77-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G77 5G 256/8GB",
+      "precio_venta": 563000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G77%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__moto-g86-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G86 5G 256/8GB",
+      "precio_venta": 563000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G86%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__moto-g86-5g-512-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G86 5G 512/8GB",
+      "precio_venta": 604000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G86%205G%20512%2F8GB"
+    },
+    {
+      "id": "motorola__moto-g86-power-5g-256-8gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Moto G86 Power 5G 256/8GB",
+      "precio_venta": 586000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Moto%20G86%20Power%205G%20256%2F8GB"
+    },
+    {
+      "id": "motorola__motorola-signature-1tb-16gb",
+      "categoria": "MOTOROLA",
+      "nombre": "Motorola Signature 1TB/16GB",
+      "precio_venta": 1941000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Motorola%20Signature%201TB%2F16GB"
+    },
+    {
+      "id": "notebooks__notebooks-gaming-y-productividad",
+      "categoria": "NOTEBOOKS",
+      "nombre": "Notebooks Gaming y Productividad",
+      "precio_venta": null,
+      "estado": "consultar",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Notebooks%20Gaming%20y%20Productividad"
+    },
+    {
+      "id": "poco__poco-c85-256-8gb",
+      "categoria": "POCO",
+      "nombre": "Poco C85 256/8GB",
+      "precio_venta": 376000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20C85%20256%2F8GB"
+    },
+    {
+      "id": "poco__poco-f8-pro-256-12gb",
+      "categoria": "POCO",
+      "nombre": "Poco F8 Pro 256/12GB",
+      "precio_venta": 1085000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20F8%20Pro%20256%2F12GB"
+    },
+    {
+      "id": "poco__poco-f8-pro-512-12gb",
+      "categoria": "POCO",
+      "nombre": "Poco F8 Pro 512/12GB",
+      "precio_venta": 1153000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20F8%20Pro%20512%2F12GB"
+    },
+    {
+      "id": "poco__poco-f8-ultra-512-16gb",
+      "categoria": "POCO",
+      "nombre": "Poco F8 Ultra 512/16GB",
+      "precio_venta": 1573000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20F8%20Ultra%20512%2F16GB"
+    },
+    {
+      "id": "poco__poco-m8-pro-256-8gb",
+      "categoria": "POCO",
+      "nombre": "Poco M8 Pro 256/8GB",
+      "precio_venta": 604000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20M8%20Pro%20256%2F8GB"
+    },
+    {
+      "id": "poco__poco-x8-pro-256-8gb",
+      "categoria": "POCO",
+      "nombre": "Poco X8 Pro 256/8GB",
+      "precio_venta": 821000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20X8%20Pro%20256%2F8GB"
+    },
+    {
+      "id": "poco__poco-x8-pro-512-8gb",
+      "categoria": "POCO",
+      "nombre": "Poco X8 Pro 512/8GB",
+      "precio_venta": 871000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20X8%20Pro%20512%2F8GB"
+    },
+    {
+      "id": "poco__poco-x8-pro-max-256-12gb",
+      "categoria": "POCO",
+      "nombre": "Poco X8 Pro Max 256/12GB",
+      "precio_venta": 998000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20X8%20Pro%20Max%20256%2F12GB"
+    },
+    {
+      "id": "poco__poco-x8-pro-max-512-12gb",
+      "categoria": "POCO",
+      "nombre": "Poco X8 Pro Max 512/12GB",
+      "precio_venta": 1087000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Poco%20X8%20Pro%20Max%20512%2F12GB"
+    },
+    {
+      "id": "samsung__galaxy-a07-128-4gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy A07 128/4GB",
+      "precio_venta": 301000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20A07%20128%2F4GB"
+    },
+    {
+      "id": "samsung__galaxy-a17-128-4gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy A17 128/4GB",
+      "precio_venta": 413000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20A17%20128%2F4GB"
+    },
+    {
+      "id": "samsung__galaxy-a26-5g-256-8gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy A26 5G 256/8GB",
+      "precio_venta": 604000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20A26%205G%20256%2F8GB"
+    },
+    {
+      "id": "samsung__galaxy-a36-5g-256-8gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy A36 5G 256/8GB",
+      "precio_venta": 714000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20A36%205G%20256%2F8GB"
+    },
+    {
+      "id": "samsung__galaxy-a57-5g-256-8gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy A57 5G 256/8GB",
+      "precio_venta": 855000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20A57%205G%20256%2F8GB"
+    },
+    {
+      "id": "samsung__galaxy-s25-fe-5g-512-12gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy S25 Fe 5G 512/12GB",
+      "precio_venta": 1225000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20S25%20Fe%205G%20512%2F12GB"
+    },
+    {
+      "id": "samsung__galaxy-s26-5g-256-12gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy S26 5G 256/12GB",
+      "precio_venta": 1400000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20S26%205G%20256%2F12GB"
+    },
+    {
+      "id": "samsung__galaxy-s26-ultra-5g-256-12gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy S26 Ultra 5G 256/12GB",
+      "precio_venta": 1958000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20S26%20Ultra%205G%20256%2F12GB"
+    },
+    {
+      "id": "samsung__galaxy-s26-ultra-5g-512-12gb",
+      "categoria": "SAMSUNG",
+      "nombre": "Galaxy S26 Ultra 5G 512/12GB",
+      "precio_venta": 2095000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Galaxy%20S26%20Ultra%205G%20512%2F12GB"
+    },
+    {
+      "id": "tablet__xiaomi-redmi-pad-2-pro-12-1-256-8gb",
+      "categoria": "TABLET",
+      "nombre": "Xiaomi Redmi Pad 2 Pro 12.1\" 256/8GB",
+      "precio_venta": 668000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xiaomi%20Redmi%20Pad%202%20Pro%2012.1%22%20256%2F8GB"
+    },
+    {
+      "id": "tablet__xiaomi-redmi-pad-se-11-256-8gb",
+      "categoria": "TABLET",
+      "nombre": "Xiaomi Redmi Pad SE 11\" 256/8GB",
+      "precio_venta": 470000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xiaomi%20Redmi%20Pad%20SE%2011%22%20256%2F8GB"
+    },
+    {
+      "id": "tablet__xiaomi-redmi-pad-se-8-7-128-6gb",
+      "categoria": "TABLET",
+      "nombre": "Xiaomi Redmi Pad SE 8.7\" 128/6GB",
+      "precio_venta": 338000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Xiaomi%20Redmi%20Pad%20SE%208.7%22%20128%2F6GB"
+    },
+    {
+      "id": "xiaomi__mi-15-512-12gb",
+      "categoria": "XIAOMI",
+      "nombre": "Mi 15 512/12GB",
+      "precio_venta": 1540000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Mi%2015%20512%2F12GB"
+    },
+    {
+      "id": "xiaomi__mi-15-ultra-512-16gb",
+      "categoria": "XIAOMI",
+      "nombre": "Mi 15 Ultra 512/16GB",
+      "precio_venta": null,
+      "estado": "consultar",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Mi%2015%20Ultra%20512%2F16GB"
+    },
+    {
+      "id": "xiaomi__mi-15t-512-12gb",
+      "categoria": "XIAOMI",
+      "nombre": "Mi 15T 512/12GB",
+      "precio_venta": 1069000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Mi%2015T%20512%2F12GB"
+    },
+    {
+      "id": "xiaomi__mi-15t-pro-512-12gb",
+      "categoria": "XIAOMI",
+      "nombre": "Mi 15T Pro 512/12GB",
+      "precio_venta": 1435000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Mi%2015T%20Pro%20512%2F12GB"
+    },
+    {
+      "id": "xiaomi__note-15-256-8gb",
+      "categoria": "XIAOMI",
+      "nombre": "Note 15 256/8GB",
+      "precio_venta": 488000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Note%2015%20256%2F8GB"
+    },
+    {
+      "id": "xiaomi__note-15-pro-256-8gb",
+      "categoria": "XIAOMI",
+      "nombre": "Note 15 Pro 256/8GB",
+      "precio_venta": 586000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Note%2015%20Pro%20256%2F8GB"
+    },
+    {
+      "id": "xiaomi__redmi-15c-128-4gb",
+      "categoria": "XIAOMI",
+      "nombre": "Redmi 15C 128/4GB",
+      "precio_venta": 291000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Redmi%2015C%20128%2F4GB"
+    },
+    {
+      "id": "xiaomi__redmi-15c-256-8gb",
+      "categoria": "XIAOMI",
+      "nombre": "Redmi 15C 256/8GB",
+      "precio_venta": 376000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Redmi%2015C%20256%2F8GB"
+    },
+    {
+      "id": "xiaomi__redmi-note-15-pro-plus-256-12gb",
+      "categoria": "XIAOMI",
+      "nombre": "Redmi Note 15 Pro Plus 256/12GB",
+      "precio_venta": 805000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Redmi%20Note%2015%20Pro%20Plus%20256%2F12GB"
+    },
+    {
+      "id": "xiaomi__redmi-note-15-pro-plus-512-12gb",
+      "categoria": "XIAOMI",
+      "nombre": "Redmi Note 15 Pro Plus 512/12GB",
+      "precio_venta": 882000,
+      "estado": "disponible",
+      "whatsapp": "5491124036673",
+      "whatsapp_url": "https://wa.me/5491124036673?text=Hola%20INGALITO%2C%20quiero%20consultar%20por%20el%20Redmi%20Note%2015%20Pro%20Plus%20512%2F12GB"
+    }
+  ]
+}

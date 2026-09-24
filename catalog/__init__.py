@@ -1,0 +1,1 @@
+"""Processing and public-catalog generation for INGALITO."""

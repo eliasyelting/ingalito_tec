@@ -1,0 +1,6 @@
+Scrapy>=2.19,<3
+scrapy-playwright>=0.0.43,<1
+pytest>=8,<9
+pytest>=8,<9
+Scrapy>=2.19,<3
+scrapy-playwright>=0.0.43,<1
