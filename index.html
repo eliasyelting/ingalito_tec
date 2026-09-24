@@ -1257,6 +1257,7 @@
       };
 
       const loadCatalog = async () => {
+        console.log("INGALITO: loadCatalog se está ejecutando");
         try {
           const response = await fetch("./data/catalogo.json", { cache: "no-store" });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
