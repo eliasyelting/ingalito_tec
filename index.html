@@ -383,7 +383,7 @@
 
       .controls {
         display: grid;
-        grid-template-columns: minmax(210px, 1.5fr) minmax(180px, 0.8fr) auto;
+        grid-template-columns: minmax(180px, 1.2fr) minmax(150px, 0.8fr) minmax(160px, 0.8fr) auto;
         gap: 12px;
         align-items: center;
         margin-bottom: 22px;
@@ -410,7 +410,8 @@
       }
 
       .search,
-      .category-select {
+      .category-select,
+      .sort-select {
         width: 100%;
         height: 48px;
         padding: 0 16px;
@@ -426,7 +427,8 @@
       }
 
       .search:focus,
-      .category-select:focus {
+      .category-select:focus,
+      .sort-select:focus {
         border-color: var(--green);
         box-shadow: 0 0 0 4px rgba(19, 122, 75, 0.12);
       }
@@ -672,7 +674,6 @@
         border-radius: var(--radius-md);
       }
 
-      /* Modificación aplicada para mejorar el contraste y legibilidad */
       .info-card:first-child {
         color: var(--ink);
         background: var(--surface);
@@ -807,6 +808,10 @@
 
         .product-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .controls {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -991,6 +996,13 @@
               <option value="all">Todas las categorías</option>
             </select>
           </label>
+          <label>
+            <span class="sr-only">Ordenar productos por precio</span>
+            <select id="sort-select" class="sort-select">
+              <option value="desc">Mayor a menor precio</option>
+              <option value="asc">Menor a mayor precio</option>
+            </select>
+          </label>
           <div class="status-tabs" role="group" aria-label="Filtrar por disponibilidad">
             <button class="tab active" type="button" data-status="all">Todos</button>
             <button class="tab" type="button" data-status="disponible">Con precio</button>
@@ -1066,12 +1078,14 @@
         category: "all",
         status: "all",
         query: "",
+        sort: "desc", // 'desc' (mayor a menor) o 'asc' (menor a mayor)
       };
 
       const elements = {
         grid: document.querySelector("#product-grid"),
         search: document.querySelector("#search"),
         categorySelect: document.querySelector("#category-select"),
+        sortSelect: document.querySelector("#sort-select"),
         categoryStrip: document.querySelector("#category-strip"),
         resultCount: document.querySelector("#result-count"),
         productTotal: document.querySelector("#product-total"),
@@ -1130,9 +1144,6 @@
 
       const filteredProducts = () => {
         const query = state.query.trim().toLocaleLowerCase("es");
-        const catalogOrder = new Map(
-          state.products.map((product, index) => [product.id, index]),
-        );
         return state.products
           .filter((product) => state.category === "all" || product.categoria === state.category)
           .filter((product) => state.status === "all" || product.estado === state.status)
@@ -1144,21 +1155,21 @@
                 .includes(query),
           )
           .sort((a, b) => {
+            // Siempre mantiene los iPhone destacados arriba
             const featuredA = featuredProductPriority.indexOf(a.nombre);
             const featuredB = featuredProductPriority.indexOf(b.nombre);
+            
             if (featuredA !== -1 || featuredB !== -1) {
               if (featuredA === -1) return 1;
               if (featuredB === -1) return -1;
               return featuredA - featuredB;
             }
 
-            const categoryA = categoryPriority.indexOf(a.categoria);
-            const categoryB = categoryPriority.indexOf(b.categoria);
-            const categoryRankA = categoryA === -1 ? categoryPriority.length : categoryA;
-            const categoryRankB = categoryB === -1 ? categoryPriority.length : categoryB;
-            if (categoryRankA !== categoryRankB) return categoryRankA - categoryRankB;
+            const priceA = Number(a.precio_venta) || 0;
+            const priceB = Number(b.precio_venta) || 0;
 
-            return (catalogOrder.get(a.id) ?? 0) - (catalogOrder.get(b.id) ?? 0);
+            // Ordenamiento dinámico según el desplegable elegido
+            return state.sort === "asc" ? priceA - priceB : priceB - priceA;
           });
       };
 
@@ -1192,11 +1203,11 @@
         }, {});
 
         elements.categoryStrip.innerHTML = [
+          `<button class="category-chip ${state.category === "all" ? "active" : ""}" type="button" data-category="all">Todas <span>${state.products.length}</span></button>`,
           ...categories.map(
             (category) =>
               `<button class="category-chip ${state.category === category ? "active" : ""}" type="button" data-category="${escapeHTML(category)}">${escapeHTML(displayCategory(category))} <span>${categoryCounts[category]}</span></button>`,
           ),
-          `<button class="category-chip ${state.category === "all" ? "active" : ""}" type="button" data-category="all">Todas <span>${state.products.length}</span></button>`,
         ].join("");
 
         elements.categoryStrip.querySelectorAll("[data-category]").forEach((button) => {
@@ -1227,7 +1238,7 @@
                 </span>
               </div>
               <h3 class="product-name">${escapeHTML(product.nombre)}</h3>
-              <div class="price-label">${isConsultar ? "Estado" : "Precio INGALITO"}</div>
+              <div class="price-label">${isConsultar ? "Estado" : "PRECIO"}</div>
               <div class="price ${isConsultar ? "consultar" : ""}">${escapeHTML(price)}</div>
             </div>
             <a class="whatsapp-button" href="${escapeHTML(whatsappURL)}" target="_blank" rel="noopener noreferrer">
@@ -1283,6 +1294,11 @@
       elements.categorySelect.addEventListener("change", (event) => {
         state.category = event.target.value;
         renderCategoryControls();
+        renderProducts();
+      });
+
+      elements.sortSelect.addEventListener("change", (event) => {
+        state.sort = event.target.value;
         renderProducts();
       });
 
