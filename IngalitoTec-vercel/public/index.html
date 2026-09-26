@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingalito TEC | Lista de Precios Oficial</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              cyan: '#06b6d4',
+              neon: '#10b981'
+            },
+            dark: {
+              bg: '#0a0d14',
+              card: '#111622',
+              border: '#1e2638'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #0a0d14;
+      color: #f3f4f6;
+    }
+    .glow-cyan {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+    }
+    .glow-indigo {
+      box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+    }
+    .glass-card {
+      background: rgba(17, 22, 34, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(30, 38, 56, 0.8);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased">
+
+  <!-- Header / Navbar -->
+  <header class="sticky top-0 z-50 glass-card border-b border-dark-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-cyan flex items-center justify-center glow-cyan shadow-lg">
+          <i data-lucide="cpu" class="w-6 h-6 text-white"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-2xl tracking-wider text-white">
+            INGALITO <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-500">TEC</span>
+          </span>
+          <span class="block text-[10px] text-gray-400 font-mono tracking-widest uppercase">Catálogo & Precios Online</span>
+        </div>
+      </div>
+
+      <!-- Sync Status & Info -->
+      <div class="hidden md:flex items-center gap-4">
+        <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Sincronizado cada 6hs</span>
+        </div>
+        <div class="text-right">
+          <p class="text-xs text-gray-400">Cotización estimada</p>
+          <p class="text-xs font-semibold text-gray-200">Precios Finales con IVA Inc.</p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <div class="absolute inset-0 -z-10 flex items-center justify-center">
+      <div class="w-[500px] h-[250px] bg-brand-cyan/10 rounded-full blur-[120px]"></div>
+      <div class="w-[400px] h-[200px] bg-brand-600/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="text-center max-w-3xl mx-auto mb-8">
+      <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-3">
+        Lista de Precios <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-500 to-emerald-400">Actualizada</span>
+      </h1>
+      <p class="text-gray-400 text-sm sm:text-base">
+        Precios directos calculados exclusivamente para pago por transferencia bancaria.
+      </p>
+    </div>
+
+    <!-- Controls Bar (Search + Filters) -->
+    <div class="glass-card rounded-2xl p-4 sm:p-5 mb-8 shadow-2xl">
+      <div class="flex flex-col md:flex-row gap-4 items-center justify-between">
+        
+        <!-- Search Input -->
+        <div class="relative w-full md:w-1/2">
+          <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+          <input 
+            type="text" 
+            id="searchInput"
+            placeholder="Buscar por marca, modelo o especificación (Ej: S25 Ultra, RTX 4070)..."
+            class="w-full bg-dark-bg/80 border border-dark-border rounded-xl pl-12 pr-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-brand-cyan focus:ring-1 focus:ring-brand-cyan transition-all"
+            oninput="filterProducts()"
+          />
+        </div>
+
+        <!-- Filters & Counter -->
+        <div class="flex flex-wrap items-center justify-between md:justify-end gap-3 w-full md:w-auto">
+          
+          <select 
+            id="stockFilter" 
+            onchange="filterProducts()"
+            class="bg-dark-bg/80 border border-dark-border rounded-xl px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-brand-cyan"
+          >
+            <option value="all">Todos los productos</option>
+            <option value="in_stock">Solo En Stock</option>
+            <option value="out_of_stock">Sin Stock</option>
+          </select>
+
+          <div class="px-4 py-3 bg-dark-bg/50 border border-dark-border rounded-xl text-xs text-gray-400 font-mono">
+            Mostrando: <span id="productCount" class="text-brand-cyan font-bold">0</span> ítems
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Product List / Grid -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
+    
+    <!-- State: Loading -->
+    <div id="loadingState" class="py-20 text-center">
+      <div class="inline-block p-4 rounded-full bg-brand-500/10 mb-4 animate-spin">
+        <i data-lucide="loader-2" class="w-8 h-8 text-brand-cyan"></i>
+      </div>
+      <p class="text-gray-400 font-mono text-sm">Cargando catálogo actualizado...</p>
+    </div>
+
+    <!-- State: Error -->
+    <div id="errorState" class="hidden py-16 text-center glass-card rounded-2xl max-w-md mx-auto border-red-500/30">
+      <i data-lucide="alert-circle" class="w-12 h-12 text-red-400 mx-auto mb-3"></i>
+      <h3 class="text-lg font-bold text-white mb-1">No se pudieron cargar los datos</h3>
+      <p class="text-sm text-gray-400 mb-4" id="errorMessage">Intenta nuevamente en unos instantes.</p>
+      <button onclick="fetchProducts()" class="px-4 py-2 bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold rounded-lg transition-all">
+        Reintentar
+      </button>
+    </div>
+
+    <!-- Grid Container -->
+    <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 hidden">
+      <!-- Direct Injection via JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-dark-border glass-card mt-auto py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="font-display font-bold text-lg text-white mb-2">INGALITO TEC</p>
+      <p class="text-xs text-gray-500 mb-4">Los precios y disponibilidad pueden variar sin previo aviso según cotización del día.</p>
+      <p class="text-xs text-gray-600 font-mono">&copy; 2026 Ingalito TEC. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    let allProducts = [];
+
+    // Inicializar Iconos Lucide
+    lucide.createIcons();
+
+    // Productos de demostración para entornos de vista previa o local (blob: / file:)
+    function getMockProducts() {
+      return [
+        { title: "Samsung Galaxy S25 Ultra 512GB Titanium Gray", price: 1850000, in_stock: true },
+        { title: "Placa de Video Nvidia RTX 4070 Ti Super 16GB GDDR6X", price: 1120000, in_stock: true },
+        { title: "Procesador Intel Core i9 14900K 5.8GHz Socket 1700", price: 780000, in_stock: true },
+        { title: "Monitor Gamer ASUS ROG Swift 27\" OLED 240Hz 0.03ms", price: 1450000, in_stock: true },
+        { title: "Memoria RAM Corsair Vengeance DDR5 32GB (2x16GB) 6000MHz", price: 185000, in_stock: true },
+        { title: "Fuente ASUS ROG Thor 1000W Platinum II Full Modular", price: 340000, in_stock: false },
+        { title: "Notebook Lenovo Legion Pro 5 Intel i7 16GB SSD 1TB RTX 4060", price: 2100000, in_stock: true },
+        { title: "Disco Sólido SSD NVMe M.2 Samsung 990 Pro 2TB 7450MB/s", price: 265000, in_stock: true },
+        { title: "Gabinete Lian Li O11 Dynamic EVO RGB Black", price: 230000, in_stock: false }
+      ];
+    }
+
+    async function fetchProducts() {
+      const loadingState = document.getElementById('loadingState');
+      const errorState = document.getElementById('errorState');
+      const productsGrid = document.getElementById('productsGrid');
+
+      loadingState.classList.remove('hidden');
+      errorState.classList.add('hidden');
+      productsGrid.classList.add('hidden');
+
+      try {
+        // Detectar si estamos ejecutando en vista previa, archivo local o servidor de desarrollo (Live Server)
+        const isLocalEnv = window.location.protocol === 'blob:' || 
+                           window.location.protocol === 'file:' || 
+                           window.location.hostname === 'localhost' || 
+                           window.location.hostname === '127.0.0.1';
+
+        if (isLocalEnv) {
+          // Simular tiempo de carga de red con datos de prueba
+          await new Promise(resolve => setTimeout(resolve, 500));
+          allProducts = getMockProducts();
+        } else {
+          // Petición al endpoint serverless de Vercel en producción
+          const response = await fetch('/api/scrape');
+          
+          if (!response.ok) {
+            throw new Error(`Error ${response.status}: No se pudo obtener la respuesta de la API`);
+          }
+
+          allProducts = await response.json();
+        }
+        
+        loadingState.classList.add('hidden');
+        productsGrid.classList.remove('hidden');
+        
+        filterProducts();
+
+      } catch (error) {
+        console.error('Error fetching products:', error);
+        loadingState.classList.add('hidden');
+        errorState.classList.remove('hidden');
+        document.getElementById('errorMessage').innerText = error.message || 'Ocurrió un error al conectar con la base de datos.';
+      }
+    }
+
+    function filterProducts() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const stockFilter = document.getElementById('stockFilter').value;
+
+      const filtered = allProducts.filter(product => {
+        const matchesSearch = product.title.toLowerCase().includes(search);
+        
+        let matchesStock = true;
+        if (stockFilter === 'in_stock') matchesStock = product.in_stock === true;
+        if (stockFilter === 'out_of_stock') matchesStock = product.in_stock === false;
+
+        return matchesSearch && matchesStock;
+      });
+
+      renderProducts(filtered);
+    }
+
+    function renderProducts(products) {
+      const grid = document.getElementById('productsGrid');
+      const countEl = document.getElementById('productCount');
+      
+      countEl.innerText = products.length;
+      grid.innerHTML = '';
+
+      if (products.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-gray-500 glass-card rounded-xl">
+            <i data-lucide="package-search" class="w-10 h-10 mx-auto mb-2 opacity-50"></i>
+            <p>No se encontraron productos coincidentes.</p>
+          </div>
+        `;
+        lucide.createIcons();
+        return;
+      }
+
+      products.forEach(prod => {
+        const formattedPrice = prod.price 
+          ? new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS', maximumFractionDigits: 0 }).format(prod.price)
+          : 'Consultar';
+
+        const stockBadge = prod.in_stock 
+          ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> En Stock
+             </span>`
+          : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-rose-500/10 border border-rose-500/30 text-rose-400">
+               <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span> Sin Stock
+             </span>`;
+
+        const card = document.createElement('div');
+        card.className = `glass-card rounded-xl p-5 hover:border-brand-500/50 transition-all duration-300 flex flex-col justify-between group ${!prod.in_stock ? 'opacity-60' : ''}`;
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="font-semibold text-gray-100 text-sm leading-snug group-hover:text-brand-cyan transition-colors">
+                ${prod.title}
+              </h3>
+              ${stockBadge}
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-dark-border mt-3 flex items-end justify-between">
+            <div>
+              <span class="block text-[10px] text-gray-400 font-mono uppercase tracking-wider">Precio Transferencia</span>
+              <span class="text-xl font-extrabold text-white font-mono tracking-tight group-hover:text-emerald-400 transition-colors">
+                ${formattedPrice}
+              </span>
+            </div>
+            
+            <a 
+              href="https://wa.me/?text=${encodeURIComponent('Hola Ingalito TEC, quiero consultar por: ' + prod.title)}" 
+              target="_blank"
+              class="p-2.5 rounded-lg bg-dark-bg border border-dark-border text-gray-300 hover:text-white hover:bg-brand-600 hover:border-brand-600 transition-all"
+              title="Consultar por WhatsApp"
+            >
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Cargar al iniciar la página
+    window.addEventListener('DOMContentLoaded', fetchProducts);
+  </script>
+
+</body>
+</html>
